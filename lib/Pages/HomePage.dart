@@ -8,7 +8,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Remote Support'),
+        
+        
       ),
+      drawer: Drawer(),
       body: Center(
         child: Text("Welcome to test"),
       ),

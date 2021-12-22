@@ -9,10 +9,21 @@
 			],
 			"problemMatcher": [],
 			"label": "flutter: flutter install",
+			"group": "build"
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"ios"
+			],
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"problemMatcher": [],
+			"label": "flutter: flutter build ios"
 		}
 	]
 }
