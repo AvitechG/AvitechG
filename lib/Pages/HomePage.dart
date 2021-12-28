@@ -19,13 +19,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    var cataLogJson = await rootBundle.loadString("assests/files/catalog.json");
-    var decodeData = jsonDecode(cataLogJson);
+    final cataLogJson =
+        await rootBundle.loadString("assests/files/catalog.json");
+    final decodeData = jsonDecode(cataLogJson);
+    var productData = decodeData["product"];
+    List<Item> list = List.from(productData).map<Item>((item) => Item.fromMap(item).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(50, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Remote Support"),
@@ -34,10 +36,10 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListView.builder(
-          itemCount: dummyList.length, //CatalogModel.items.length,
+          itemCount: CatalogModel.items.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: dummyList[index], //CatalogModel.items[index],
+              item: CatalogModel.items[index],
             );
           },
         ),
