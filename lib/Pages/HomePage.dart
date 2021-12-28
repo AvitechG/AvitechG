@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newapptest/widgets/drawer.dart';
+import 'package:newapptest/models/Catalog.dart';
+import 'package:newapptest/widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,9 +13,16 @@ class HomePage extends StatelessWidget {
         title: Text("Remote Support"),
       ),
       drawer: MyDrawer(),
-      body: Center(
-        child: Text("Welcome to test"),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget();
+          },
+        ),
       ),
-    );
+        
+     );
   }
 }
