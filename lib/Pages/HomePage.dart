@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Remote Support'),
+        title: Text("Remote Support"),
       ),
       drawer: MyDrawer(),
       body: Center(
