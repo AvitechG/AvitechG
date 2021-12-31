@@ -19,7 +19,10 @@ class ItemWidget extends StatelessWidget {
           style: TextStyle(
             color: Colors.deepPurple,
             fontWeight: FontWeight.bold,
+        
           ),
+          
+          
         ),
       ),
     );
