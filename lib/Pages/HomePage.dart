@@ -1,11 +1,8 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
-
 import 'package:newapptest/models/Catalog.dart';
-
 import 'package:newapptest/widgets/theme.dart';
 import 'package:velocity_x/velocity_x.dart';
 
